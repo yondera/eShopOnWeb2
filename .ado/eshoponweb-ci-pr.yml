@@ -10,9 +10,7 @@ stages:
   jobs:
   - job: Build
     pool:
-      name: az400m03l03a-pool
-      demands: 
-      - Agent.Name -equals az400m03-vm0
+      vmImage: ubuntu-latest
     steps:
     - task: DotNetCoreCLI@2
       displayName: Restore
